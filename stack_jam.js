@@ -37,6 +37,7 @@ $(document).ready(function(){
         $(this).fadeOut();
         $(".stack_info").fadeOut();
         $("#show_stack").fadeIn();
+        play();
         
     });
 
@@ -65,6 +66,7 @@ $(document).ready(function(){
 
     $("#top").click(function(){
         f3();
+        
         console.log("TOP");
     });
 
@@ -96,6 +98,7 @@ $(document).ready(function(){
         while(!isEmpty()){
             f2();
         }
+        pause2();
         MAXIMUM_SIZE = Math.floor(Math.random() * 5)+5;
 
 
@@ -113,10 +116,12 @@ $(document).ready(function(){
     $("#pic").hover(function(){
 
         $("#dialog").css("display","block");
+        play();
     
     }, function(){
 
         $("#dialog").css("display","none");
+        stop();
     });
 
 
@@ -124,9 +129,8 @@ $(document).ready(function(){
     function display_functions(){
     $(id).fadeOut().empty();
     $("#show_stack").fadeIn();
+    
     }
-
-
 
         document.getElementById("stack").innerHTML = "The stack Is Empty!";
     
@@ -134,6 +138,16 @@ $(document).ready(function(){
 
  function showCap(){
     document.getElementById("stack").innerHTML = "Capacity: " + getCurrentCapacity();
+}
+
+var cantina = document.getElementById("cantina");
+ 
+function play2() {
+    cantina.play();
+}
+ 
+function pause2() {
+    cantina.pause();
 }
 
 var MAXIMUM_SIZE = Math.floor(Math.random() * 5)+5;
@@ -224,5 +238,9 @@ function getVal() {
     const val = document.querySelector('input').value;
     return val;
   }
+
+
+
+
 
 
