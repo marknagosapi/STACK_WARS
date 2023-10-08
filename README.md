@@ -16,6 +16,7 @@ HTML, CSS & JS that's all I used to create this little project.
 
 # You can acces the website anytime!
 
-The website is online by the help of netlify.com! 
+The website is online by the help of netlify.com!
+-> Check It Out: https://stackwars.netlify.app
 
  
