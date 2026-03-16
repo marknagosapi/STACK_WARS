@@ -175,6 +175,7 @@ var MAXIMUM_SIZE = Math.floor(Math.random() * 5)+5;
         showCap();
         const v = getVal();
         $("#result").prepend("<div id='stackContainer'> <h1 id='stack_value'>" + v + " </h1> </div>");
+        
     } else {
         document.getElementById("stack").innerHTML = "The stack is FULL!";
     }
@@ -213,6 +214,7 @@ var MAXIMUM_SIZE = Math.floor(Math.random() * 5)+5;
      $("#stackContainer").css("background-color","transparent");
      $("#stack_value").css("color","#feda4a");
      push(v);
+     document.querySelector('input').value = '';
      }
    
      //document.getElementById("stack").innerHTML = stackArray;
